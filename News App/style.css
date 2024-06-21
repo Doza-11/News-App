@@ -55,7 +55,7 @@ nav{
 
 .main-nav{
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     padding: 8px 0;
 }
 
@@ -65,7 +65,7 @@ nav{
 }
 
 .nav-links ul{
-    gap: 30px;
+    gap: 20px;
 }
 
 .hover-link{
@@ -114,7 +114,7 @@ nav{
 
 main{
     padding-block: 20px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .cards-container {
@@ -154,4 +154,22 @@ main{
 
 .news-source{
     margin-block: 12px;
+}
+
+.save-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card {
+    position: relative;
+    /* Other styles */
 }

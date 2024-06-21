@@ -1,17 +1,26 @@
-const API_KEY = "daef703f4a264ab4a0ddec798334117a";
-const url = "https://newsapi.org/v2/everything?q=";
 
-window.addEventListener("load", () => fetchNews("Trending"));
+
+window.addEventListener("load", () => fetchNews("World"));
 
 function reload(){
     window.location.reload();
 }
 
-async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data = await res.json();
-    bindData(data.articles);
-}
+// async function fetchNews(query) {
+//     const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+//     const data = await res.json();
+//     console.log(data.articles);
+//     bindData(data.articles);
+// }
+
+//chatgpt
+// async function fetchNews(query) {
+//     const res = await fetch(`/fetch-news?q=${query}`);
+//     const data = await res.json();
+//     // Assuming the backend returns the articles after saving to DB
+//     bindData(data.articles);
+// }
+
 
 function bindData(articles){
     const cardsContainer = document.getElementById('cards-container');
@@ -19,7 +28,9 @@ function bindData(articles){
 
     cardsContainer.innerHTML = '';
 
-    articles.forEach(article => {
+    const limitedArticles = articles.slice(0, 35);
+
+    limitedArticles.forEach(article => {
         if(!article.urlToImage) return;
 
         const cardClone = newsCardTemplate.content.cloneNode(true);
@@ -52,6 +63,7 @@ function fillDataInCard(cardClone,article){
 let curSelectedNav = null;
 function onNavItemClick(id){
     fetchNews(id); 
+    console.log(`${url}${id}&apiKey=${API_KEY}`);
     const navItem = document.getElementById(id);
     curSelectedNav?.classList.remove('active');
     curSelectedNav = navItem;

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 48.5%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p, li, a {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color: var(--para-color);
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+ 
+
+/* Theme */
+
+:root {
+    --main-color: #0062ff;
+    --supporting-color: #ebf3fe;
+    --font-color: #424242;
+    /* --bg-color: #ffffff; */
+    --bg-color: #f7fcff;
+    --heading-color: #000a19;
+    --hero-heading-color: #003b99;
+    --white-color: #ffffff;
+    --para-color: #504e4d;
+    --bnt-hover-bg-color: #003b99;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --footer-bg-color: #040d12;
+}
+
+.section-navbar .container .navbar-brad img{
+  width: 120%;
+  height: 75px;
+}
+
+/* Layout */
+
+.container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+}
+
+:is(
+    .section-about,
+    .section-blog,
+    .section-contact,
+    .section-course,
+    .section-why--choose,
+    .section-contact--homepage
+  )
+  .container:first-child {
+  padding: 6.4rem 2.4rem 2.4rem 2.4rem;
+}
+
+/* Module */   /* Reusable */
+
+.section-common-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.section-common-subheading {
+    color: var(--heading-color);
+}
+
+.section-common--title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+}
+
+.fa-solid {
+    padding: 2.4rem;
+    /* background-color: var(--supporting-color); */
+    font-size: 2.4rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* color: var(--hero-heading-color); */
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3.2rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+}
+
+/* States */
+
+.btn:hover {
+    background-color: var(--bnt-hover-bg-color);
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+}
+
+/* Navbar section */
+
+.section-navbar{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.section-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 11px;
+}
+
+.section-navbar .navbar ul {
+    display: flex;
+    gap: 3.2rem;
+
+    & li a {
+        color: var(--heading-color);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: inline-block;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 0;
+            width: 0%;
+            border-bottom: 0.2rem solid var(--main-color);
+            transition: all 0.3s linear;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -ms-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+        }
+    }
+    & li a:hover:after {
+        width: 100%;
+    }
+    
+}
+
+
+.a {
+    width: 100%;
+    height: 43.7vh;
+    display: block;
+    background-color: rgb(85, 88, 91);
+    margin-right: 50px;
+    border: 1px solid rgb(47, 51, 55);
+    border-style: solid;
+}
+
+button {
+    background-color: rgb(99, 192, 251);
+    color: black;
+    margin: auto;
+    border-radius: 3px;
+    padding: 5px;
+    border: solid;
+    border-width: 1px;
+    cursor: pointer;
+    width: 100px;
+    font-size: small;
+    width: 100%;
+    height: 35px;
+}
+button:hover{
+    background: rgb(81, 188, 255);
+}
+.outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reg {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    padding: 25px;
+    width: 360px;
+    margin: 100px;
+    border-radius: 5px;
+    font-size:2.1rem;
+}
+
+.in {
+    width: 100%;
+    padding: 9px;
+    margin: 7px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.in:focus {
+    border: 1px solid rgb(81, 188, 255);
+    -webkit-box-shadow: 0 0 10px rgb(81, 188, 255);
+    box-shadow: 0 0 10px rgb(81, 188, 255);
+}
+
+.error{
+    color: red;
+}
