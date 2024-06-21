@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Log in</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<title>Registration form</title>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+	<div class="outer">
+		<div class="reg">
+			<form name="x2" aria-required="true" action="/login" method="post">
+				<h1 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Log in</h1><br><br>
+				<div>
+					<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">User name</h4>
+					<input type="text" id="username" name="username" value="" class="in">
+					<span id="usernameError" class="error"></span>
+				</div>
+				<div>
+					<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Password</h4>
+					<input type="password" id="password" name="password" value="" class="in"><i class="far fa-eye" id="togglePassword" style="margin-left: -30px;cursor: pointer"  onclick="showpas()"></i>	
+					<span id="passwordError" class="error"></span>
+				</div>		
+				<br><br>
+				<center><button onclick="val()">Log in</button></center>
+				<br>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">If you are not registered then first sign up <a href="signup" style="color: rgb(57, 57, 217);font-size:2rem;"> Sign up</a></h4>
+			</form>
+		</div>
+	</div>
+	<script src="js/login.js"></script>
+</body>
+
+</html>

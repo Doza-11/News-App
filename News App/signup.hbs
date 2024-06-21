@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Sign up</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<title>Registration form</title>
+	<link rel="stylesheet" href="css/signup.css">
+	<link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.18/libphonenumber-js.min.js"></script>
+</head>
+
+<body>
+	<div class="outer">
+		<div class="reg">
+			<form  name="x1" aria-required="true" action="/signup" method="post">
+			<h1 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Sign up</h1><br><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">First name</h4>
+				<input type="text" id="firstname" name="firstName" class="in">
+				<br><span id="firstNameError" class="error"></span>
+			</div><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Last name</h4>
+				<input type="text" id="lastname" name="lastName" class="in">
+				<span id="lastNameError" class="error"></span>
+			</div><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Email</h4>
+				<input type="email" id="email" name="email" class="in">
+				<span id="emailError" class="error"></span>
+			</div><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;margin-bottom: 7px;">Mobile number</h4>
+				<input id="mobileNumber" type="tel" name="mobileNumber" class="in" style="width: 309px;" />
+				<span id="mobileNumberError" class="error"></span>
+			</div><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;margin-top: 7px;">User name</h4>
+				<input type="text" id="username" name="username" value="" class="in">
+				<span id="usernameError" class="error"></span>
+			</div><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Password (Minimum 8 character) </h4>
+				<input type="password" id="password" name="password" value="" class="in"><i class="far fa-eye" id="togglePassword" style="margin-left: -30px;cursor: pointer"  onclick="showpas()"></i>	
+				<span id="passwordError" class="error"></span>
+			</div><br>
+			<div>
+				<h4 style="font-family:Amazon Ember, Arial, sans-serif;font-weight: 100;">Confirm password</h4>
+				<input type="password" id="confirmPassword" name="confirmPassword" value="" class="in">
+				<span id="confirmPasswordError" class="error"></span>
+			</div><br>
+			<center><button type="submit" onclick="val()">Sign up</button></center>
+			</form>
+		</div>
+	</div>
+		<script src="js/signup.js"></script>
+</body>
+
+</html>
